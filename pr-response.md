@@ -39,8 +39,11 @@ Totally agreed. I can change the implmentation to date added instead.
 
 ## Comment 6 — Rebase
 **What conflicted:**
+`.gitignore` — add/add conflict. `main` had added `.pytest_cache/` and branch had `.venv/` and `venv/`.
 **How I resolved it:**
+Kept both sides (`.pytest_cache/`, `.venv/`, and `venv/`), then `git add .gitignore` and `git rebase --continue`.
 **How I verified no conflict remains:**
+`git rebase` completed successfully with a clean working tree (`git status` showed no unmerged paths).
 
 ## PR Description
 <!-- Written at the end — feature overview, design decisions, manual testing steps -->
