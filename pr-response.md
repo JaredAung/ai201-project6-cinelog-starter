@@ -22,14 +22,20 @@ Checked test_add_to_collection_nonexistent_film_raises and how the test operates
 Ran pytest tests/test_watchlist.py -v and the test passed. 
 
 ## Comment 4 — Default visibility
-**My position:**
+**My position:** 
+Prefer public=False by default.
 **Reasoning:**
+A “want to watch” list can feel personal; defaulting to private avoids surprising users with visibility. Social apps like Letterboxd often default public for community features, but I’d rather require an explicit opt-in to share.
 **Tradeoff acknowledged:**
+Users must opt in to be public, which may reduce discovery/sharing unless the UI makes that easy.
 
 ## Comment 5 — Sort order
-**My position:**
+**My position:** 
+Prefer date_added descending
 **Reasoning:**
+Personal preference in a watchlist is with date_added. Keep currently interested movies at the top of the list. 
 **Engagement with reviewer's point:**
+Totally agreed. I can change the implmentation to date added instead. 
 
 ## Comment 6 — Rebase
 **What conflicted:**
